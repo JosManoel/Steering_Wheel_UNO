@@ -1,6 +1,6 @@
 ## Sterring Wheel UNO
 
-Este shield foi desenvolvido para o Arduino UNO, baseado em uma publicação do [Laboratório de Garagem] (https://labdegaragem.com/profiles/blogs/tutorial-joystick-shield-arduino-uno-unojoy) e tendo como base a biblioteca [UnoJoy](https://github.com/AlanChatham/UnoJoy).
+Este shield foi desenvolvido para o Arduino UNO, baseado em uma publicação do [Laboratório de Garagem](https://labdegaragem.com/profiles/blogs/tutorial-joystick-shield-arduino-uno-unojoy) e tendo como base a biblioteca [UnoJoy](https://github.com/AlanChatham/UnoJoy).
 
 ***
 <p align = "center">
