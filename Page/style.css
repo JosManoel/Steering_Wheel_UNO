@@ -1,0 +1,45 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, input, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.social {
+    margin: 16px;
+    height: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github__icon{
+    max-width: 24px;
+    max-height: 24px;
+    width: auto;
+    height: auto;
+}
+
+.github__link{
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+
+    display: flex;
+    text-align: center;
+
+    color: #010101;
+
+}
