@@ -1,26 +1,212 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,800;1,300&display=swap');
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-header{
+header{width: 100%; margin: 16px;}
+
+h1{
+    margin: 16px 0;
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+h2{
+    margin: 16px 0;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+h3{
+    margin: 16px 0;    
+    font-size: .7rem;
+    text-indent: 6ch;
+    line-height:2;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.github{display: flex; align-items: center;}
+.github button{
+    height: 100%;
+    margin: 4px;
+
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.github__icon img{width: 24px; height: 100%;}
+
+home{
     width: 100%;
-    height: 5vh;
-    overflow: hidden;
-}
-.github__icon{
-    width: 5vh;
-    height: 100%;
-    overflow: hidden;
+    font-family: Archivo, sans-serif;
 }
 
-.github__icon img{
-    width: 5vh;
+.title{margin: 0px 16px;}
+
+.title h1{
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.1rem;
+}
+
+.title h2{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.buttons button{
+    padding: 6px;
+    margin-top: 8px;
+
+    display:inline-flex;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #c4c4c4;
+   
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.buttons img{
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.button__margin{margin-left: 8px;}
+
+.image__home{
+    width: 100%;
     height: 100%;
-    object-fit: scale-down;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.image__home img{
+    width: 90%;
+    filter: drop-shadow(5px 5px 5px rgb(146, 145, 145));
+}
+
+.alt__version button{
+    padding: 8px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    display:inline-flex;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #04BF58;
+   
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+}
+
+info{font-family: Archivo, sans-serif;}
+
+.info__text{
+    padding: 16px;
+    background-color: #4f4f4f;
+    color: white;
+}
+
+.info__image{
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.info__image img{
+    width: 90%;
+    filter: drop-shadow(5px 5px 5px rgb(32, 32, 32));
+}
+
+.components{
+    margin-top: 16px;
+    margin-left: 16px;
+    list-style-type: disc;
+}
+
+.components li{margin-bottom: 4px; list-style: disc;}
+
+.layers{background-color: #04BF58; border-radius: 8px;}
+
+.layers h2{font-style: italic; text-align: center;}
+
+.version{margin: 16px 0px;}
+
+.version h2{
+    font-style: italic;
+    text-align: right;
+    font-size: 1.1rem;
+}
+
+connections{font-family: Archivo, sans-serif;}
+
+.conn_text{margin: 16px;}
+
+.conn_text img{filter: drop-shadow(5px 5px 5px rgb(146, 145, 145));}
+
+.conn{
+    margin: 0px 18px;
+    display:flex;
+    align-items: center;
+    vertical-align:baseline;
+}
+
+.conn h2{margin:0;padding-bottom: 2px;}
+
+.conn h3 {
+    margin: 0px;
+    flex-grow: 1;
+
+    text-align: right;
+    text-indent: 0;
+    font-size: .7rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.separator{
+    width: 100%;
+    margin-bottom: 36px;
+    list-style: none;
+    padding: 0;
+}
+
+.separator li{padding-top: .5rem;}
+
+.separator li::after{
+    margin-left: 16px;
+    width: 90%;
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgb(196, 180, 180);
+    padding-top: .5rem;
+}
+
+.separator li:last-child::after {display: none;}
+
+footer{background: #4f4f4f;}
+
+footer h2{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: .8rem;
+    font-family: Archivo, sans-serif;
 }
