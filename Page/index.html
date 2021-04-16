@@ -28,55 +28,70 @@
             <home>
                 <div class="title">
                     <h1>Steering Wheel UNO</h1>
+
                     <div class="title__complement">
                         <h2>Shield para Arduino UNO</h2>
                     </div>
+
                     <div class="buttons">
-                        <button ><img src="assets/github.png" alt="GitHub"/>Ir para o repositorio</button>
-                        <button class= "button__margin"><img src="assets/download.png" alt="Download"/>Gerber</button>
-                        <button class="button__margin"><img src="assets/download.png" alt="Download"/>PDF</button>
+                        <button><img src="assets/github.png" alt="GitHub"/>Ir para o repositorio</button>
+                        <button><img src="assets/download.png" alt="Download"/>Gerber</button>
+                        <button><img src="assets/download.png" alt="Download"/>PDF</button>
                     </div>
                 </div>
+
                 <div class="image__home">
                     <img src= "assets/PCB_home.png" alt="Layout do shield para arduino"/>
-                </div>
-                <div class="alt__version">
-                    <button>Versão alternativa</button>
-                </div>
+                </div>   
             </home>
 
+            <div class="alt__version">
+                <button>Versão alternativa</button>
+            </div>
+            
             <info>
                 <div class="info__text">
                     <h3>
                         Este shield foi desenvolvido para utilização em joysticks de simulação, utilizando o CI 74HC165 (registrador de deslocamento com saída serial) destinado a aumentar o número de portas do Arduino UNO. O shield conta com 4 saídas analógicas, destinadas ao volante, acelerador, freio e embreagem, além de saídas digitais para os botões direcionais, home, freio de mão, buzina, paddle shift (cambio borboleta) e câmbio manual. O dispositivo foi criado tendo como base a biblioteca UnoJoy, estando limitado aos inputs suportados por esta biblioteca.
                     </h3>
+                    
                     <h1>Componentes</h1>
                     <h2>Componentes necessários para a montagem.</h2>
-                    <div class="info__image">
-                        <img src="assets/PCB_Bottom.png" alt="Layout do shield para arduino"/>
+                    
+                    <div class="components">
+                        <div class="image">
+                            <div class="info__image">
+                                <img src="assets/PCB_Bottom.png" alt="Layout do shield para arduino"/>
+                            </div>
+                        </div>
+                       
+                        <div class="components__list">
+                            <h2>
+                                <li>8x resistor 10k;
+                                <li>5x conector KK Macho 3 vias;
+                                <li>2x conector KK Macho 2 vias;
+                                <li>1x conector KK Macho 6 vias;
+                                <li>1x conector KK Macho 9 vias;
+                                <li>1x Led;
+                                <li>1x CI 74HC165;
+                                <li>3x Potenciômetros 1k;
+                                <li>1x Barra de pinos.</li>
+                            </h2>
+                        </div>
                     </div>
+
                     <div class="buttons">
                         <button><img src="assets/github.png" alt="GitHub"/>Baixar esquemáticos</button>
                     </div>
-                    <div class="components">
-                        <h2>
-                            <li>8x resistor 10k;
-                            <li>5x conector KK Macho 3 vias;
-                            <li>2x conector KK Macho 2 vias;
-                            <li>1x conector KK Macho 6 vias;
-                            <li>1x conector KK Macho 9 vias;
-                            <li>1x Led;
-                            <li>1x CI 74HC165;
-                            <li>3x Potenciômetros 1k;
-                            <li>1x Barra de pinos.</li>
-                        </h2>
-                    </div>
+
                     <h3>
                         O shield tem 53mm x 69mm de dimensões, cobrindo todo o Arduino UNO. Em virtude disto, o dispositivo dispõe de um LED de 5mm ligado ao pino 13, onde serve de extensão do LED interno do Arduino, facilitando a visualização de sinais de aviso emitidos. O LED é um componente opcional.
                     </h3>
+
                     <div class="layers">
                         <h2>Este projeto possui 4 layers.</h2>
                     </div>
+
                     <div class="version">
                         <h2>Versão: 1.2</h2>
                     </div>
@@ -88,71 +103,74 @@
                     <h1>Conexões</h1>
                     <h2>Conexões presentes na PCB.</h2>
 
-                    <div class="info__image">
-                        <img src="assets/PCB_Top.png" alt="Layout do shield para arduino"/>
+                    <div class="connections">
+                        <div class="info__image">
+                            <img src="assets/PCB_Top.png" alt="Layout do shield para arduino"/>
+                        </div>
+                        <ul class="separator">
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada analógica do volante:</h2>
+                                    <h3>STRG</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada analogica da embreagem:</h2>
+                                    <h3>CLUT</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada analógica do freio:</h2>
+                                    <h3>BRAKE</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada analógica do acelerador:</h2>
+                                    <h3>ACCEL</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada digital do freio de mão:</h2>
+                                    <h3>HBRAKE</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entrada digital da buzina:</h2>
+                                    <h3>HORN</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entradas digitais direcionais:</h2>
+                                    <h3>STRG_BUTTONS</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entradas digitais câmbio manual:</h2>
+                                    <h3>GEAR_PINS</h3>
+                                </div>   
+                            </li>
+                            <li>
+                                <div class="conn">
+                                    <h2>Entradas digitais cambio borboleta:</h2>
+                                    <h3>PADDLE_SHIFT</h3>
+                                </div>   
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="separator">
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada analógica do volante:</h2>
-                            <h3>STRG</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada analogica da embreagem:</h2>
-                            <h3>CLUT</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada analógica do freio:</h2>
-                            <h3>BRAKE</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada analógica do acelerador:</h2>
-                            <h3>ACCEL</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada digital do freio de mão:</h2>
-                            <h3>HBRAKE</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entrada digital da buzina:</h2>
-                            <h3>HORN</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entradas digitais direcionais:</h2>
-                            <h3>STRG_BUTTONS</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entradas digitais câmbio manual:</h2>
-                            <h3>GEAR_PINS</h3>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="conn">
-                            <h2>Entradas digitais cambio borboleta:</h2>
-                            <h3>PADDLE_SHIFT</h3>
-                        </div>   
-                    </li>
-                </ul>
             </connections>
             
             <footer>
-                <h2>Feito por JosManoel com  &#128187  e  &#127911.</h2>
+                <h2>Feito por JosManoel com  &#9749, &#128187  e  &#127911.</h2>
             </footer>
+
         </div>
     </body>
 </html>
