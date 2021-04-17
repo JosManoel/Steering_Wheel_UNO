@@ -84,12 +84,17 @@ home{
     font-weight: 600;
 
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .buttons img{
     width: 16px;
     height: 16px;
     margin-right: 4px;
+}
+
+.buttons button:hover{
+    background: #afafaf;
 }
 
 .image__home{
@@ -121,6 +126,11 @@ home{
     color: white;
 
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.alt__version button:hover{
+    background: #07853f;
 }
 
 /* Info */
