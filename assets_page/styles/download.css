@@ -21,14 +21,8 @@
 
 .title h1{font-size: 15vw;}
 
-.body{width: 100%;}
+.body{width: 100%}
 
-.image-preview{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .download-files{
     width: 100%;
@@ -38,8 +32,6 @@
     justify-content: center;
     flex-direction: column;
 }
-
-.image-preview img{width: 95%;}
 
 .files{
     width: 85%;

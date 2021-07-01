@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Default Layout</title>
+        <title>Steering Wheel UNO</title>
 
         <link rel="stylesheet" href="/assets_page/styles/download.css"/>
+        <script src="/assets_page/scripts/download_file.js"></script>
+        
     </head>
 
     <body>
@@ -19,34 +21,53 @@
                 <div class="downloads">
                     <div class="header">
                         <div class="title">
-                            <h1>Layout Minimalist Default</h1>
+                            <h1>Steering Wheel UNO</h1>
             
-                            <div class="select-version">
-                                <button class="version" onclick="version1()">
-                                    <h3>rev 1.2</h3>
-                                </button>
+                            <div class="select-version">   
+                                    <h3>Rev 1.2</h3>
                             </div>
                         </div>
                     </div>
             
                     <div class="body">
                         <div class="project">
-                            <div class="image-preview">
-                                <img src="/assets_page/images/Image1.png">
-                            </div>
-            
                             <div class="download-files">
+
                                 <div class="files">
-                                    <h3>Baixar arquivos zipados</h3>
+                                    <h3>Baixar documentação em PDF</h3>
                                     <div>
-                                        <h3>785mb</h3>
-            
-                                        <button>
+                                        <button onclick="download('JosManoel/Steering_Wheel_UNO/raw/main/Schematic/Steering_Wheel_UNO.pdf')">
                                             <img class="img-icon" src="/assets_page/icons/download.png">
                                         </button>
                                     </div>
                                 </div>
 
+                                <div class="files">
+                                    <h3>Baixar esquemáticos eletrônicos</h3>
+                                    <div>
+                                        <button onclick="download('JosManoel/Steering_Wheel_UNO/raw/main/Schematic/Schematic_PDF.pdf')">
+                                            <img class="img-icon" src="/assets_page/icons/download.png">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="files">
+                                    <h3>Baixar arquivos Gerber: Versão 1.2</h3>
+                                    <div>
+                                        <button onclick="download('JosManoel/Steering_Wheel_UNO/raw/main/Gerber/Gerber_Steering_Wheel_UNO.zip')">
+                                            <img class="img-icon" src="/assets_page/icons/download.png">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="files">
+                                    <h3>Baixar arquivos Gerber: Versão Hibica 1.2</h3>
+                                    <div>
+                                        <button onclick="download('JosManoel/Steering_Wheel_UNO/raw/main/Gerber/Grupo_para_pessoas_pobres_com_computadores_ruins.zip')">
+                                            <img class="img-icon" src="/assets_page/icons/download.png">
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>       
