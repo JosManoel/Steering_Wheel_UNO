@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Layout</title>
+
+    <link rel="stylesheet" href="/assets_page/styles/navigator_bar.css"/>
+    <script src="/assets_page/scripts/open_menu.js"></script>
+    <script src="/assets_page/scripts/iframe_height.js"></script>
+    <script src="/assets_page/scripts/navigation.js"></script>
+
+</head>
+
+<body>
+    <div  class="container">
+        <nav id="iframePage" class="navigator-bar">
+            <div>
+                <button class="repository-link" onclick="openRepository()">
+                    <img class="icon-navigator" src="/assets_page/icons/github.png" alt="GitHub Icon">
+                    <h3>Repositório</h3>
+                </button>
+
+                <button class="hamburguer-menu" onclick="openMenu('hamburguerMenu','openMenu','/assets_page/icons/close.png', '/assets_page/icons/menu_hamburguer.png')">
+
+                <img class="icon-navigator" id="openMenu" src="/assets_page/icons/menu_hamburguer.png">
+                </button>
+            </div>
+
+            <nav class="navigator-itens" id="hamburguerMenu">
+                <button onclick="toHome()">
+                    <h3>Início</h3>
+                </button>
+
+                <button onclick="toInfo()">
+                    <h3>Informações</h3>
+                </button>
+
+                <button onclick="toDownloads()">
+                    <h3>Downloads</h3>
+                </button>
+            </nav>
+        </nav>   
+    </div>
+</body>
+</html>

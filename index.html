@@ -6,176 +6,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Steering Wheel UNO</title>
 
-        <link rel="stylesheet" href="style.css"/>
-        <script src="script.js"></script>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-        <link rel="manifest" href="assets/icons/site.webmanifest">
+        <link rel="stylesheet" href="/assets_page/styles/index.css"/>
     </head>
 
-    <body>
-        <div class="container">
-          
-            <header>
-                <div class = "github">
-                    <div class = "github__icon">
-                        <img src="assets/github.png" alt="GitHub" />
-                    </div> 
-                    <button onclick = "openProfile()">JosManoel</button>
-                </div>
-            </header>
+    <body class="container">
+        <header>
+            <iframe id="iframe" src="/assets_page/navigation/navigator_bar.html" height="" width="100%"></iframe>
+        </header>
         
-            <home>
-                <div class="title">
-                    <h1>Steering Wheel UNO</h1>
-
-                    <div class="title__complement">
-                        <h2>Shield para Arduino UNO</h2>
-                    </div>
-
-                    <div class="buttons">
-                        <button onclick="openRepo()"><img src="assets/github.png" alt="GitHub"/>Ir para o repositorio</button>
-
-                        <button onclick="donwloadGerber()"><img src="assets/download.png" alt="Download Gerber"/>Gerber</button>
-
-                        <button onclick="donwloadPDF()"><img src="assets/download.png" alt="Download PDF"/>PDF</button>
+        <home class="home">
+            <div class="home-page">
+                <div class="home-text">
+                    <div class="text">
+                        <div class="title">
+                            <h1>Steering Wheel UNO</h1>
+                        </div>
+    
+                        <div class="sub-title">
+                            <h3>Shield para Arduíno UNO</h3>
+                        </div>
+                        
+                        <div class="tech-used">
+                            <img class="tech-img" src="/assets_page/icons/technology/arduino_uno.png" alt="Arduíno logo"> 
+                            <img class="tech-img" src="/assets_page/icons/technology/proteus_logo.png" alt="Proteus logo"> 
+                        </div>
+                        
+                        <div class="abstract">
+                            <p>
+                                Este shield foi confeccionado para utilização em joysticks de simulação, utilizando o CI 74HC165 (registrador de deslocamento com saída serial), onde é destinado a aumentar o número de portas do Arduino UNO. O shield conta com 4 saídas analógicas, preparadas para o volante, acelerador, freio e embreagem, além de saídas reservadas para os botões direcionais, home, freio de mão, buzina, paddle shift e câmbio manual. O dispositivo foi criado tendo como base a biblioteca UnoJoy, estando limitado aos inputs suportados por esta biblioteca.
+                            </p>
+                        </div>  
                     </div>
                 </div>
+        
+                <div class="home-image">
+                    <div class="images">
+                        <img id="imageSlide" src="/assets_page/images/PCB_home.png">
+                    </div>
 
-                <div class="image__home">
-                    <img id= "home_image" src= "assets/PCB_home.png" alt="Layout do shield para arduino"/>
-                </div>   
-            </home>
+                    <div class="nav-images">
+                        <button onclick="backImage()">
+                            <img class="nav-icon" src="/assets_page/icons/back.png">
+                        </button>
+                        
+                        <button onclick="nextImage()">
+                            <img class="nav-icon" src="/assets_page/icons/next.png">
+                        </button>
+                    </div>
 
-            <div  id="alt_Version" class="alt__version">
-                <button onclick="alt_version()">Versão alternativa</button>
+                    <script src="/assets_page/scripts/slider.js"></script>
+                </div>        
             </div>
-            
-            <info>
-                <div class="info__text">
-                    <h3>
-                        Este shield foi confeccionado para utilização em joysticks de simulação, utilizando o CI 74HC165 (registrador de deslocamento com saída serial), onde é destinado a aumentar o número de portas do Arduino UNO. O shield conta com 4 saídas analógicas, preparadas para o volante, acelerador, freio e embreagem, além de saídas reservadas para os botões direcionais, home, freio de mão, buzina, paddle shift e câmbio manual. O dispositivo foi criado tendo como base a biblioteca UnoJoy, estando limitado aos inputs suportados por esta biblioteca.
-                    </h3>
-                    
-                    <h1>Componentes</h1>
-                    <h2>Itens necessários para a confecção da PCB.</h2>
-                    
-                    <div class="components">
-                        <div class="image">
-                            <div class="info__image">
-                                <img id="bottom_image" src="assets/PCB_Bottom.png" alt="Layout do shield para arduino"/>
-                            </div>
-                        </div>
-                       
-                        <div class="components__list">
-                            <h2>
-                                <li>8x resistor 10k;
-                                <li>5x conector KK Macho 3 vias;
-                                <li>2x conector KK Macho 2 vias;
-                                <li>1x conector KK Macho 6 vias;
-                                <li>1x conector KK Macho 9 vias;
-                                <li>1x Led;
-                                <li>1x CI 74HC165;
-                                <li>3x Potenciômetros 1k;
-                                <li>1x Barra de pinos.</li>
-                            </h2>
-                        </div>
-                    </div>
+        </home>
 
-                    <div class="buttons">
-                        <button onclick="donwloadEsq()"><img src="assets/github.png" alt="GitHub"/>Baixar esquemáticos</button>
-                    </div>
-
-                    <h3>
-                        O shield tem 53 mm x 69 mm de dimensões, estendendo-se por todo o Arduino UNO. Em virtude disto, o dispositivo dispõe de um LED de 5 mm interligado ao pino 13, onde atua como extensor do LED interno do Arduino, facilitando a visualização de sinais de aviso emitidos. O LED é um componente opcional.
-                    </h3>
-
-                    <div class="layers">
-                        <h2>Este projeto possui 4 layers.</h2>
-                    </div>
-
-                    <div class="version">
-                        <h2 id= "version_text" >Versão: 1.2</h2>
-                    </div>
-                    <h3 id = "note"></h3>
+        <footer>
+            <div class="footer-bar">
+                <nav class="social-media">
+                    <a href="https://github.com/JosManoel">
+                        <img class="icon-footer" src="/assets_page/icons/social_github.png">
+                        <h5>josmanoel</h5>
+                    </a>
+                </nav>
+                
+                <div class="menssage">
+                    <h4>Feito por JosManoel com</h4>
+                    <img class="img-mss" src="/assets_page/icons/coffe.png">
+                    <h4>,</h4>
+                    <img class="img-mss" src="/assets_page/icons/headset.png">
+                    <h4> e</h4>
+                    <img class="img-mss" src="/assets_page/icons/laptop.png">
+                    <h4>.</h4>
                 </div>
-            </info>
-
-            <connections>
-                <div class="conn_text">
-                    <h1>Conexões</h1>
-                    <h2>Conexões presentes na PCB.</h2>
-
-                    <div class="connections">
-                        <div class="info__image">
-                            <img id="top_image" src="assets/PCB_Top.png" alt="Layout do shield para arduino"/>
-                        </div>
-                        <ul class="separator">
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada analógica do volante:</h2>
-                                    <h3>STRG</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada analogica da embreagem:</h2>
-                                    <h3>CLUT</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada analógica do freio:</h2>
-                                    <h3>BRAKE</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada analógica do acelerador:</h2>
-                                    <h3>ACCEL</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada digital do freio de mão:</h2>
-                                    <h3>HBRAKE</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entrada digital da buzina:</h2>
-                                    <h3>HORN</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entradas digitais direcionais:</h2>
-                                    <h3>STRG_BUTTONS</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entradas digitais câmbio manual:</h2>
-                                    <h3>GEAR_PINS</h3>
-                                </div>   
-                            </li>
-                            <li>
-                                <div class="conn">
-                                    <h2>Entradas digitais cambio borboleta:</h2>
-                                    <h3>PADDLE_SHIFT</h3>
-                                </div>   
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </connections>
-            
-            <footer>
-                <h2>Feito por JosManoel com  &#9749, &#128187  e  &#127911.</h2>
-            </footer>
-
-        </div>
+            </div>
+        </footer>
     </body>
 </html>

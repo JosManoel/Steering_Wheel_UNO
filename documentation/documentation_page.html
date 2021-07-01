@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Steering Wheel UNO</title>
+
+        <link rel="stylesheet" href="/assets_page/styles/documentation.css"/>
+        <script src="/assets_page/scripts/open_menu.js"></script>
+        <script src="/assets_page/scripts/set_summary.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <iframe id="iframe" src="/assets_page/navigation/navigator_bar.html" height="" width="100%"></iframe>
+            </header>
+
+            <home class="home">
+                <div class="information"> 
+                    <div class="summary">
+                        <div class="title">
+                            <h2>Steering Wheel UNO</h2>
+                        </div>
+                        
+                        <hr style="height: 2px;">
+
+                        <div>
+                            <button onclick="openMenu('index','openIndex','/assets_page/icons/up.png','/assets_page/icons/down.png')">
+                                <img class="nav-icon" id="openIndex" src="/assets_page/icons/down.png" alt="">
+                            </button>
+                        </div>
+                        
+                            <nav class="index" id="index"></nav>
+
+                        <hr style="height: 2px;">
+                    </div>
+    
+                    <div class="article">
+
+                        <h2 class="title" href = "#">Resumo</h2>
+
+                        <p>
+                            Este shield foi confeccionado para utilização em joysticks de simulação, utilizando o CI 74HC165 (registrador de deslocamento com saída serial), onde é destinado a aumentar o número de portas do Arduino UNO. O shield conta com 4 saídas analógicas, preparadas para o volante, acelerador, freio e embreagem, além de saídas reservadas para os botões direcionais, home, freio de mão, buzina, paddle shift e câmbio manual. O dispositivo foi criado tendo como base a biblioteca UnoJoy, estando limitado aos inputs suportados por esta biblioteca.
+
+                        </p>
+
+                        <h2 class="title" href = "#">Hardware</h2>
+                        <div>
+                            <img src="/assets_page/images/PCB_Bottom-Top.png">
+                        </div>
+                        <p>
+                            O shield tem 53mm x 69mm de dimensões, com 4 layers, cobrindo todo o Arduino UNO. Em virtude disto, o dispositivo dispõe de um LED de 5mm ligado ao pino 13, onde serve de extensão do LED interno do Arduino, facilitando a visualização de sinais de aviso emitidos. O LED é um componente opcional.
+                        </p>
+
+                        <h2 class="subtitle" href = "#">Componentes</h2>
+
+                        <p>
+                            O shield tem 53 mm x 69 mm de dimensões, estendendo-se por todo o Arduino UNO. Em virtude disto, o dispositivo dispõe de um LED de 5 mm interligado ao pino 13, onde atua como extensor do LED interno do Arduino, facilitando a visualização de sinais de aviso emitidos. O LED é um componente opcional. Este projeto possui 4 layers.
+                        </p>
+                        <p>
+                            <li>8x resistor 10k;
+                            <li>5x conector KK Macho 3 vias;
+                            <li>2x conector KK Macho 2 vias;
+                            <li>1x conector KK Macho 6 vias;
+                            <li>1x conector KK Macho 9 vias;
+                            <li>1x Led;
+                            <li>1x CI 74HC165;
+                            <li>3x Potenciômetros 1k;
+                            <li>1x Barra de pinos.</li>
+                        </p>
+
+                        <p>
+                            Versão: 1.2.
+                        </p>
+
+                        <h2 class="title" href = "#">Conexões</h2>
+
+                        <table cellspacing ="10">
+                            <tr>
+                                <th>Entrada</th>
+                                <th>Descrição</th>
+                            </tr>
+
+                            <tr>
+                                <td>STRG</td>
+                                <td>Entrada analógica do volante.</td>
+                            </tr>
+                            <tr>
+                                <td>CLUT</td>
+                                <td>Entrada analogica da embreagem.</td>
+                            </tr>
+                            <tr>
+                                <td>BRAKE</td>
+                                <td>Entrada analógica do freio.</td>
+                            </tr>
+                            <tr>
+                                <td>ACCEL</td>
+                                <td>Entrada analógica do acelerador.</td>
+                            </tr>
+                            <tr>
+                                <td>HBRAKE</td>
+                                <td>Entrada digital do freio de mão.</td>
+                            </tr>
+                            <tr>
+                                <td>HORN</td>
+                                <td>Entrada digital da buzina.</td>
+                            </tr>
+                            <tr>
+                                <td>STRG_BUTTONS</td>
+                                <td>Entradas digitais direcionais.</td>
+                            </tr>
+                            <tr>
+                                <td>GEAR_PINS</td>
+                                <td>Entradas digitais câmbio manual.</td>
+                            </tr>
+                            <tr>
+                                <td>PADDLE_SHIFT</td>
+                                <td>Entradas digitais cambio borboleta.</td>
+                            </tr>
+                        </table>
+                        
+                        <h2 class="title" href = "#">Sketch</h2>
+
+                        <p>
+                            O projeto conta com um sketch demonstrativo onde é documentada a utilização biblioteca UnoJoy para transformar o Arduino em um dispositivo USB. O código ainda conta com uma função para realizar a leitura de dados seriais recebidos do CI 74HC165.
+                        </p>
+
+                        <h2 class="subtitle" href = "#">Leitura de dados do CI 74HC165</h2>
+
+                        <p>
+                            O CI 74HC165, responsável pela leitura de dados do câmbio manual, é um registrador de deslocamento com 8 entradas digitais e 1 saída serial, onde a leitura dos dados é realizada de forma paralela. As entradas do 74HC165 precisam ser setadas para nível logico baixo, através de 8 resistores de pull-down de 10K, passando para nível lógico alto quando um botão é pressionado (para mais informações consulte os diagramas).
+                        </p>
+
+                        <p>O CI 74HC165 está conectado ao Arduino Uno por 4 pinos, sendo eles:</p>
+
+                        <table cellspacing ="10">
+                            <tr>
+                                <th></th>
+                                <th>Arduino</th>
+                                <th>74HC165</th>
+                            </tr>
+                            <tr>
+                                <th>Clock_in</th>
+                                <td>Pin 12</td>
+                                <td>Pin 2</td>
+                            </tr>
+                            <tr>
+                                <th>Data</th>
+                                <td>Pin 11</td>
+                                <td>Pin 7</td>
+                            </tr>
+                            <tr>
+                                <th>Clock_Enb</th>
+                                <td>Pin 10</td>
+                                <td>Pin 15</td>
+                            </tr>
+                            <tr>
+                                <th>Load_In</th>
+                                <td>Pin 9</td>
+                                <td>Pin 1</td>
+                            </tr>
+                        </table>
+
+                        <h2 class="subtitle" href = "#">Código</h2>
+                        <p>
+                            Após declarar os pinos de entrada do CI no Arduino, é iniciado um pulso no pino Load, que irá carregar os dados retirados da entrada paralela em um buffer. Em um próximo passo, o CI é configurado para realizar a leitura utilizando a função shiftIn, configurado com o bitOrder em MSBFIRST (Bit mais significativo). Para finalizar, o pino ClockIn é setado para nível alto, informando que a leitura foi finalizada, retornando a leitura dos dados.
+                        </p>
+
+                        <h2 class="subtitle" href = "#">Código de pulso de clock</h2>
+
+                        <pre>       
+
+                            void pulsePin(int pulse_clock){
+                                // Gera um pulso de clock no pino Load [CI 74HC165]
+                                digitalWrite(LoadIn, LOW);
+                                delayMicroseconds(pulse_clock);
+                                digitalWrite(LoadIn,HIGH);
+                                delayMicroseconds(pulse_clock);
+                            }
+
+                        </pre>
+
+                        <h2 class="subtitle" href = "#">Código de leitura de dados</h2>
+
+                        <pre>
+
+
+                            byte getGear() {
+                                // Recuperando os dados do CI 74HC165 e realizando o shiftIn
+                                digitalWrite(ClockIn, HIGH);
+                                digitalWrite(ClockEnb, LOW);
+                              
+                                byte data = shiftIn(DataIn, ClockIn, MSBFIRST);
+                              
+                                digitalWrite(ClockIn, HIGH);
+                                // Retornando leitura dos 8 pinos do 74HC165 (1 byte)
+                                return(data);
+                              }
+
+                        </pre>
+
+                        <h2 class="title" href = "#">Leitura recomendada</h2>
+
+                        <ul>
+                            <li>
+                                <a href="https://dronebotworkshop.com/shift-registers/">Shift Registers – 74HC595 & 74HC165 with Arduino</a>
+                            </li>
+                            <li>
+                                <a href="https://www.arduino.cc/reference/pt/language/functions/advanced-io/shiftin/">ShiftIn()</a>
+                            </li>
+                            <li>
+                                <a href="https://labdegaragem.com/profiles/blogs/tutorial-joystick-shield-arduino-uno-unojoy">UnoJoy utilize seu Arduino Uno como um Joystick</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/AlanChatham/UnoJoy">Biblioteca UnoJoy</a>
+                            </li>
+                        </ul>
+
+                        <h2 class="title" href = "#">Licença</h2>
+                        
+                        <p>Este projeto está sobre a licença <a href="https://github.com/JosManoel/Steering_Wheel_UNO/blob/main/LICENSE">Apache</a>.</p>
+
+                    </div>
+                </div>     
+            </home>
+
+            <footer>
+                <div class="footer-bar">
+                    <div class="menssage">
+                        <h4>Feito por JosManoel com</h4>
+                        <img class="img-mss" src="/assets_page/icons/coffe.png">
+                        <h4>,</h4>
+                        <img class="img-mss" src="/assets_page/icons/headset.png">
+                        <h4> e</h4>
+                        <img class="img-mss" src="/assets_page/icons/laptop.png">
+                        <h4>.</h4>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
