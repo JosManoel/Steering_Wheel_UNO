@@ -2,12 +2,12 @@ image_slide = document.getElementById("imageSlide");
 var index_image = 0;
 var sliderInterval;
 var image_list = [
-    'assets_page/images/PCB_home.png', 
-    'assets_page/images/PCB_Bottom.png', 
-    'assets_page/images/PCB_top.png',
-    'assets_page/images/PCB_home_alt.png',
-    'assets_page/images/PCB_Top_alt.png',
-    'assets_page/images/PCB_Bottom_alt.png'
+    '/assets_page/images/PCB_home.png', 
+    '/assets_page/images/PCB_Bottom.png', 
+    '/assets_page/images/PCB_top.png',
+    '/assets_page/images/PCB_home_alt.png',
+    '/assets_page/images/PCB_Top_alt.png',
+    '/assets_page/images/PCB_Bottom_alt.png'
 ];
 
 function changeImage(image, array_image, index){
