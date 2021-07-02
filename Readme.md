@@ -42,7 +42,7 @@ O shield tem **53mm x 69mm** de dimensões, com 4 layers, cobrindo todo o Arduin
 ### 🔌 Conexões  
 
 <p align = "center">
-  <img src= "https://github.com/JosManoel/Steering_Wheel_UNO/blob/main/Images/PCB_Top.png" alt = "Shield Sterring Wheel Top" width = "400"/>
+  <img src= "https://github.com/JosManoel/Steering_Wheel_UNO/blob/main/assets_page/images/PCB_Top.png" alt = "Shield Sterring Wheel Top" width = "400"/>
 </p>
 
 * **STRG** – Entrada analógica do volante;
