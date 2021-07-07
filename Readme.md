@@ -115,5 +115,5 @@ byte getGear() {
 
 ### 📝 Licença
 
-Este projeto está sobe a licença [Apache](https://github.com/JosManoel/Steering_Wheel_UNO/blob/main/LICENSE).
+Este projeto está sob a licença [Apache](https://github.com/JosManoel/Steering_Wheel_UNO/blob/main/LICENSE).
 
